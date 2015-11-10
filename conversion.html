@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="jquery-1.11.3.min.js"></script>
+  <title> CONVERSIONS </title>
+</head>
+<body>
+
+<table class="maintable">
+            	<tr style="line-height:50px;">
+       				 <form>
+ 						 <input type="number" name="quantity">
+ 						 <input type="submit" value="Submit" action="result.html" 
+ 						 method="post">
+					</form>
+                   
+                    <td>
+                    	<select id="categories">
+                            <option values="">--Select--</option>
+                            <option> Temperature</option>
+                            
+                        </select>
+                    </td>
+                </tr>
+                <tr style="line-height:20px;">
+                	<td>to</td>
+                  
+                    <td>
+                    	<select style="float:left;" id="subcats">
+                        </select>
+
+                    </td>
+    </tr>
+</table>
+<script type="text/javascript">
+			 var Auto = [
+				{display: "Farenheit to Celsius", value: "FtoC" },
+				{display: "Farenheit to Kelvin", value: "FtoK" },
+				{display: "Celsius to Farenheit", value: "CtoF" },
+				{display: "Celsius to Kelvin", value: "CtoK" },
+				{display: "Kelvin to Celsius", value: "KtoC" },
+				{display: "Kelvin to Farenheit", value: "KtoF" }
+				];
+   
+	
+
+$("#categories").change(function() {
+   					 var parent = $(this).val();
+						switch(parent){
+							case 'Temperature':
+								 list(Auto);
+								break;
+							case 'Currency':
+								 list(Appliances);
+								break;             
+							default: //default child option is blank
+								$("#subcats").html('');  
+								break;
+							   }
+				});
+				function list(array_list)
+				{
+					$("#subcats").html(""); //reset child options
+					$(array_list).each(function (i) { //populate child options
+					$("#subcats").append("<option value=\""+array_list[i].value+"\">"+array_list[i].display+"</option>");
+					});
+				}
+</script>
+
+</body>
+</html>
