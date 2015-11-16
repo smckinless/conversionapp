@@ -8,29 +8,5 @@
 	<div id="quantity">
 		{{conversion}}
 	</div>
-	<div id="final">
-
-	</div>
-<script type="text/javascript">
-	$(document).ready(function() {
-		function compute() {
-			var quanitity = $("#quantity").val();
-			var final_number = quanitity * 5;
-			$('#final').val(final_number);
-		}
-		$('#quantity').change(compute);
-	});
-
-	//$(function() {
-	//	$.ajax({
-	//		url: '/result',
-	//		data: $('input[name="quanitity"]').val(),
-	//		type: 'POST',
-	//		success: function(data) {
-	//			console.log(data ++);
-	//		}
-	//	});
-	//});
-</script>
 </body>
 {% endblock %}
