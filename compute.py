@@ -6,7 +6,7 @@ def compute (quantity, wanted):
 		return 0.55555556 * (quantity + 459.67)
 
 	elif wanted == "CtoF":
-		return 1.8 * (quantity - 32)
+		return (1.8 * quantity) + 32
 
 	elif wanted == "CtoK":
 		return quantity + 273.15
