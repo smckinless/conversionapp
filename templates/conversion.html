@@ -8,15 +8,16 @@
 	<script src="jquery-1.11.3.min.js"></script>
   <title> CONVERSIONS </title>
 </head>
-<body>
 
+{% block content %}
+<body>
 <table class="maintable">
             	<tr style="line-height:50px;">
-       				 <form>
- 						 <input type="number" name="quantity">
- 						 <input type="submit" value="Submit" action="result.html" 
+       				 <form id="mainform" method="post" action="">
+       				 	{{ form.quantity }}
+ 						 <input type="submit" value="Submit" 
  						 method="post">
-					</form>
+					
                    
                     <td>
                     	<select id="categories">
@@ -30,12 +31,13 @@
                 	<td>to</td>
                   
                     <td>
-                    	<select style="float:left;" id="subcats">
+                    	<select style="float:left;" id="subcats" name="wanted">
                         </select>
-
+                        </form>
                     </td>
     </tr>
 </table>
+
 <script type="text/javascript">
 			 var Auto = [
 				{display: "Farenheit to Celsius", value: "FtoC" },
@@ -72,4 +74,5 @@ $("#categories").change(function() {
 </script>
 
 </body>
+{% endblock %}
 </html>
