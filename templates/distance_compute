@@ -1,0 +1,18 @@
+def distance_compute (quantity, wanted):
+	if wanted == "MtoK":
+		return "{0:.2f}".format(quantity * 1.60934)
+	
+	elif wanted == "KtoM":
+		return "{0:.2f}".format(quantity * .621371)
+
+	elif wanted == "ItoF":
+		return "{0:.2f}".format(quantity / 12)
+
+	elif wanted == "FtoI":
+		return "{0:.2f}".format(quantity + 273.15)
+
+	elif wanted == "FtoM":
+		return "{0:.2f}".format(quantity / 5280)
+
+	elif wanted =="MtoF":
+		return "{0:.2f}".format(quantity * 5280)

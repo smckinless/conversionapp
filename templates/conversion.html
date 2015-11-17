@@ -23,6 +23,8 @@
                     	<select id="categories">
                             <option values="">--Select--</option>
                             <option> Temperature</option>
+                            <option> Distance</option>
+                            <option> Volume</option>
                             
                         </select>
                     </td>
@@ -47,6 +49,21 @@
 				{display: "Kelvin to Celsius", value: "KtoC" },
 				{display: "Kelvin to Farenheit", value: "KtoF" }
 				];
+			var Distance = [
+				{display: "Miles to Kilometers", value: "MtoK"},
+				{display: "Kilometers to Miles", value: "KtoM"},
+				{display: "Inches to Feet", value: "ItoF"},
+				{display: "Feet to Inches", value: "FtoI"},
+				{display: "Feet to Miles", value: "FtoM"},
+				{display: "Miles to Feet", value: "MtoF"}
+				];
+			var Volume = [
+				{display: "Milliliters to Liters", value: "MLtoL"},
+				{display: "Liters to Gallons", value: "LtoG"},
+				{display: "Pints to Gallons", value: "PtoG"},
+				{display: "Pints to Quarts", value: "PtoQ"},
+				{display: "Quarts to Gallons", value: "QtoG"},
+				];
    
 	
 
@@ -56,8 +73,11 @@ $("#categories").change(function() {
 							case 'Temperature':
 								 list(Auto);
 								break;
-							case 'Currency':
-								 list(Appliances);
+							case 'Distance':
+								 list(Distance);
+								break;
+							case 'Volume':
+								list(Volume);
 								break;             
 							default: //default child option is blank
 								$("#subcats").html('');  
