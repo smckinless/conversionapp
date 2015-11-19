@@ -36,3 +36,9 @@ hr {
 .categories {
 	text-align: center;
 }
+
+#quantity {
+	text-align: center;
+	font-family: 'Cabin';
+	font-size: 200px;
+}
