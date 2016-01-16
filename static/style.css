@@ -29,6 +29,10 @@ hr {
     border-color: #e67e22;
 }
 
+table {
+	margin: 0 auto;
+}
+
 .body {
 	text-align: center;
 }
