@@ -2,6 +2,7 @@ import unittest
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 import time
+from random import randint
 
 class Convert(unittest.TestCase):
 
@@ -14,7 +15,7 @@ class Convert(unittest.TestCase):
 
 	# To test temperature conversions
 	def test_temp_conversion(self):
-		numbers = ["500", "40", "50"]
+		numbers = [str(randint(0,1000)), str(randint(0,1000)), str(randint(0,1000))]
 		temperature_units = ["Farenheit to Celsius", 
 		"Farenheit to Kelvin", 
 		"Celsius to Farenheit",
@@ -44,7 +45,7 @@ class Convert(unittest.TestCase):
 
 	# To test distance conversions
 	def test_dist_conversion(self):
-		numbers = ["500", "40", "50"]
+		numbers = [str(randint(0,1000)), str(randint(0,1000)), str(randint(0,1000))]
 		distance_units = ["Miles to Kilometers", 
 		"Kilometers to Miles", 
 		"Inches to Feet",
@@ -74,7 +75,7 @@ class Convert(unittest.TestCase):
 
 	# To test volume conversions
 	def test_volume_conversion(self):
-		numbers = ["500", "40", "50"]
+		numbers = [str(randint(0,1000)), str(randint(0,1000)), str(randint(0,1000))]
 		volume_units = ["Milliliters to Liters", 
 		"Liters to Gallons", 
 		"Pints to Gallons",
